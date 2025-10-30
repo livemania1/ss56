@@ -175,7 +175,7 @@
       
 
     <script>
-          const manifestUri ="https://jiotvmblive.cdn.jio.com/bpk-tv/Star_Sports_1_Hindi_BTS/output/index.mpd?hdnea=st=1760832042~exp=1760918442~acl=/*~hmac=4f9c2537ac1d36bd4f85226c1968265f4389da98588990642f20ac7bfd44e94c";
+          const manifestUri ="https://otte.live.fly.ww.aiv-cdn.net/sin-nitro/live/dash/enc/ebgsyorlcl/out/v1/ce95d81f287040d5a3fa6d4b145be849/cenc.mpd?";
         async function init() {
           const video = document.getElementById('video');
           const ui = video['ui'];
@@ -188,6 +188,13 @@
         
           window.player = player;
             window.ui = ui;
+                  player.configure({
+                drm: {
+                    "clearKeys": {
+                        'f61c80b95c8dc7af075a839ebd584b34': '80b53f92abc0865a244e8d68810fd4bb'
+                    }
+                }
+            });
           
           player.addEventListener('error', onPlayerErrorEvent);
           controls.addEventListener('error', onUIErrorEvent);
